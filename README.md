@@ -1,64 +1,59 @@
-# COVID-19 Data Analysis and Visualization
+# COVID-19 Data Analysis using Regression and Classification
 
-This project analyzes a COVID-19 dataset containing information about patients, including demographic and clinical data, and visualizes various aspects of the data.
+This project aims to analyze COVID-19 data and predict the number of new cases and whether there will be an increase in new deaths using different machine learning algorithms. We will apply Linear Regression, Logistic Regression, K-Nearest Neighbors (KNN), and Decision Tree algorithms for regression and classification tasks.
 
-## Dataset Columns
+## Table of Contents
+- [Requirements](#requirements)
+- [Data Preprocessing](#data-preprocessing)
+- [Linear Regression](#linear-regression)
+- [Logistic Regression](#logistic-regression)
+- [K-Nearest Neighbors](#k-nearest-neighbors)
+- [Decision Tree](#decision-tree)
 
-The dataset contains the following columns:
+## Requirements
 
-- USMER
-- MEDICAL_UNIT
-- SEX
-- PATIENT_TYPE
-- DATE_DIED
-- INTUBED
-- PNEUMONIA
-- AGE
-- PREGNANT
-- DIABETES
-- COPD
-- ASTHMA
-- INMSUPR
-- HIPERTENSION
-- OTHER_DISEASE
-- CARDIOVASCULAR
-- OBESITY
-- RENAL_CHRONIC
-- TOBACCO
-- CLASIFFICATION_FINAL
-- ICU
+The following Python libraries are required:
 
-## Preprocessing and Data Wrangling
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- scikit-learn
 
-The preprocessing and data wrangling steps include:
+## Data Preprocessing
 
-1. Checking for missing values
-2. Filling missing values
-3. Converting the date column to datetime format
-4. Filtering data based on specific conditions
-5. Calculating age groups
-6. Grouping data by specific columns and aggregating
+1. Load the dataset from a CSV file.
+2. Remove rows with missing values in the relevant columns.
+3. Create a new binary column 'death_increase' indicating whether there is an increase in new deaths.
+4. Select relevant features for prediction, such as 'population_density', 'gdp_per_capita', and 'median_age'.
+5. Split the dataset into training and testing sets for both regression and classification tasks.
 
-## Analysis and Constructive Questions
+## Linear Regression
 
-The analysis answers several constructive questions, such as:
+1. Initialize a Linear Regression model.
+2. Fit the model to the training data.
+3. Make predictions on the testing data.
+4. Evaluate the model performance using mean squared error.
 
-1. What is the total number of deaths in the dataset?
-2. What is the distribution of deaths by age group?
-3. What is the distribution of deaths by sex?
-4. What are the most common comorbidities among deceased patients?
+## Logistic Regression
 
-## Visualization
+1. Initialize a Logistic Regression model.
+2. Fit the model to the training data.
+3. Make predictions on the testing data.
+4. Evaluate the model performance using accuracy score and confusion matrix.
 
-Several visualizations are generated using Matplotlib and Seaborn:
+## K-Nearest Neighbors
 
-1. Distribution of deaths by age group
-2. Distribution of deaths by sex
-3. Most common comorbidities among deceased patients
-4. Distribution of ICU admissions by age group
-5. Distribution of intubations by age group
-6. Correlation matrix between comorbidities
+1. Initialize KNN Regression and Classification models.
+2. Fit the models to the training data.
+3. Make predictions on the testing data.
+4. Evaluate the model performance using mean squared error for regression and accuracy score and confusion matrix for classification.
 
-## Usage
+## Decision Tree
 
-You can use this code by downloading the dataset, modifying the URL in the code, and executing the code in a Python environment with the required libraries installed (numpy, pandas, matplotlib, seaborn).
+1. Initialize Decision Tree Regression and Classification models.
+2. Fit the models to the training data.
+3. Make predictions on the testing data.
+4. Evaluate the model performance using mean squared error for regression and accuracy score and confusion matrix for classification.
+
+To visualize the results, we will create scatter plots for regression models comparing actual and predicted values, and heatmaps for confusion matrices for classification models.
